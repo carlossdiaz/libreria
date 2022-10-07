@@ -2,19 +2,19 @@
     require '../modelo/modelo.php';
     session_start();    
 
-    $isbn = $_GET['isbn'];
+    $dni = $_GET['dni'];
 
-    $libros = $_SESSION['libros'];
+    $socios = $_SESSION['socios'];
 
 
-    for ($i = 0; $i < count($libros); $i++) {
-        if($isbn == $libros[$i]->isbn){
-            array_splice($libros,$i,1);
+    for ($i = 0; $i < count($socios); $i++) {
+        if($dni == $socio[$i]->dni){
+            array_splice($socios,$i,1);
             break;
         }
     }
 
-    $_SESSION['libros'] = $libros;
+    $_SESSION['socios'] = $socios;
 
-    header('Location: libros.php');
+    header('Location: socios.php');
 ?>
