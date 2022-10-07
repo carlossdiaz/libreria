@@ -1,9 +1,15 @@
 <?php 
-    require 'modelo.php';
+    require 'modelo/modelo.php';
+
+    session_start();
 
     $libro1 = new Libro("1234", "La casa de los espíritus");
   
     $libro2 = new Libro("9897", "El silencio de los corderos");
+
+    $libros = array($libro1, $libro2);
+
+    $_SESSION['libros'] = $libros;
   
 
 ?>
@@ -18,8 +24,8 @@
 <body>
 
 <h2>Menú</h2>
-<p><a href="libros.php">Libros</a></p>
-<p><a href="socios.php">Socios</a></p>
+<p><a href="libros/libros.php">Libros</a></p>
+<p><a href="socios/socios.php">Socios</a></p>
 
 </body>
 </html>
