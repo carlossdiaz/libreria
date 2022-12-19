@@ -29,6 +29,8 @@
         <tr>
             <th>isbn</th>
             <th>Título</th>
+            <th>Autor</th>
+            <th>Fecha</th>
             <th colspan="2"><a href="nuevolibro.php">Nuevo</a></th>
         </tr>
             <?php
@@ -38,6 +40,8 @@
                     echo "<tr>";
                     echo "<td>$libro->isbn</td>";
                     echo "<td>$libro->titulo</td>";
+                    echo "<td>$libro->autor</td>";
+                    echo "<td>$libro->fecha</td>";
                     echo "<td><a href=\"libro.php?isbn=$libro->isbn\">editar</a></td>";
                     echo "<td><a href=\"bajalibro.php?isbn=$libro->isbn\">eliminar</a></td>";
                     echo "</tr>";

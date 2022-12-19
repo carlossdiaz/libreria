@@ -4,10 +4,12 @@
 
     $isbn = $_POST['isbn'];
     $titulo = $_POST['titulo'];
+    $autor = $_POST['autor'];
+    $fecha = $_POST['fecha'];
 
     $libros = $_SESSION['libros'];
 
-    $libro = new Libro($isbn, $titulo);
+    $libro = new Libro($isbn, $titulo, $autor, $fecha);
 
     array_push($libros, $libro);
 

@@ -34,11 +34,11 @@ class Libro {
     return $this->autor;
   }
 
-  function set_fehca($fehca) {
-    $this->fehca = $fehca;
+  function set_fecha($fecha) {
+    $this->fecha = $fecha;
   }
-  function get_fehca() {
-    return $this->fehca;
+  function get_fecha() {
+    return $this->fecha;
   }
 }
 
@@ -53,38 +53,44 @@ class Socio {
   public $telefono;
   public $direccion;
 
-  function __construct($isbn, $titulo) {
+  function __construct($nombre, $apellidos, $dni, $telefono, $direccion) {
     $this->nombre = $nombre;
-    $this->titulo = $titulo;
+    $this->apellidos = $apellidos;
+    $this->dni = $dni;
+    $this->telefono = $telefono;
+    $this->direccion = $direccion;
   }
 
   // Methods
-  function set_isbn($isbn) {
-    $this->isbn = $isbn;
+  function set_nombre($nombre) {
+    $this->nombre = $nombre;
   }
-  function get_isbn() {
-    return $this->isbn;
+  function get_nombre() {
+    return $this->nombre;
   }
-
-  function set_titulo($titulo) {
-    $this->titulo = $titulo;
+  function set_apellidos($apellidos) {
+    $this->apellidos = $apellidos;
   }
-  function get_titulo() {
-    return $this->titulo;
+  function get_apellidos() {
+    return $this->apellidos;
   }
-  
-  function set_autor($autor) {
-    $this->autor = $autor;
+  function set_dni($dni) {
+    $this->dni = $dni;
   }
-  function get_autor() {
-    return $this->autor;
+  function get_dni() {
+    return $this->dni;
   }
-
-  function set_fehca($fehca) {
-    $this->fehca = $fehca;
+  function set_telefono($telefono) {
+    $this->telefono = $telefono;
   }
-  function get_fehca() {
-    return $this->fehca;
+  function get_telefono() {
+    return $this->telefono;
+  }
+  function set_direccion($direccion) {
+    $this->direccion = $direccion;
+  }
+  function get_direccion() {
+    return $this->direccion;
   }
 }
 

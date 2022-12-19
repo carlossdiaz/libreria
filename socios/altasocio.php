@@ -2,16 +2,19 @@
     require '../modelo/modelo.php';
     session_start();    
 
-    $isbn = $_POST['isbn'];
-    $titulo = $_POST['titulo'];
+    $nombre = $_POST['nombre'];
+    $apellidos = $_POST['apellidos'];
+    $dni = $_POST['dni'];
+    $telefono = $_POST['telefono'];
+    $direccion = $_POST['direccion'];
 
-    $libros = $_SESSION['libros'];
+    $socios = $_SESSION['socios'];
 
-    $libro = new Libro($isbn, $titulo);
+    $socio = new Socio($nombre, $apellidos, $dni, $telefono, $direccion);
 
-    array_push($libros, $libro);
+    array_push($socios, $socio);
 
-    $_SESSION['libros'] = $libros;
+    $_SESSION['socios'] = $socios;
 
-    header('Location: libros.php');
+    header('Location: socios.php');
 ?>

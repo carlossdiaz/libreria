@@ -3,9 +3,9 @@
 
     session_start();
 
-    $libros = $_SESSION['libros'];
+    $socios = $_SESSION['socios'];
 
-    //print_r($libros);
+    //print_r($socios);
 
 ?>
 <!DOCTYPE html>
@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listado de libros</title>
+    <title>Listado de socios</title>
 
     <style>
         table, th, td {
@@ -24,27 +24,34 @@
 
 </head>
 <body>
-    <h2>libros</h2>
+    <h2>socios</h2>
     <table>
         <tr>
-            <th>isbn</th>
-            <th>Título</th>
-            <th colspan="2"><a href="nuevolibro.php">Nuevo</a></th>
+            <th>nombre</th>
+            <th>apellidos</th>
+            <th>dni</th>
+            <th>telefono</th>
+            <th>direccion</th>
+
+            <th colspan="2"><a href="nuevosocio.php">Nuevo</a></th>
         </tr>
             <?php
-            //    print_r($libros);
+            //    print_r($socios);
 
-                foreach($libros as $libro) {
+                foreach($socios as $socio) {
                     echo "<tr>";
-                    echo "<td>$libro->isbn</td>";
-                    echo "<td>$libro->titulo</td>";
-                    echo "<td><a href=\"libro.php?isbn=$libro->isbn\">editar</a></td>";
-                    echo "<td><a href=\"bajalibro.php?isbn=$libro->isbn\">eliminar</a></td>";
+                    echo "<td>$socio->nombre</td>";
+                    echo "<td>$socio->apellidos</td>";
+                    echo "<td>$socio->dni</td>";
+                    echo "<td>$socio->telefono</td>";
+                    echo "<td>$socio->direccion</td>";
+                    echo "<td><a href=\"socio.php?dni=$socio->dni\">editar</a></td>";
+                    echo "<td><a href=\"bajasocio.php?dni=$socio->dni\">eliminar</a></td>";
                     echo "</tr>";
                 }
             ?>
     </table>
 
-    <a href="editarlibro.php?isbn"></a>
+    <a href="modificarsocio.php?dni"></a>
 </body>
 </html>

@@ -4,6 +4,8 @@
 
     $isbn = $_POST['isbn'];
     $titulo = $_POST['titulo'];
+    $autor = $_POST['autor'];
+    $fecha = $_POST['fecha'];
 
     $libros = $_SESSION['libros'];
 
@@ -12,6 +14,8 @@
         if($isbn == $libros[$i]->isbn){
             $libros[$i]->isbn = $isbn;
             $libros[$i]->titulo = $titulo;
+            $libros[$i]->autor = $autor;
+            $libros[$i]->fecha = $fecha;
             break;
         }
     }

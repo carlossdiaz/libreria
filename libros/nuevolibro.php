@@ -13,6 +13,10 @@
         <input type="text" name="isbn" id="isbn" value="">
         <label for="titulo">titulo</label>
         <input type="text" name="titulo" id="titulo" value="">
+        <label for="autor">autor</label>
+        <input type="text" name="autor" id="autor" value="">
+        <label for="fecha">fecha</label>
+        <input type="text" name="fecha" id="fecha" value="">
         <input type="submit" value="Nuevo">
     </form>
     

@@ -30,6 +30,11 @@
         <input type="text" name="isbn" id="isbn" value="<?php echo $libro_match->isbn ?>">
         <label for="titulo">titulo</label>
         <input type="text" name="titulo" id="titulo" value="<?php echo $libro_match->titulo ?>">
+        <label for="autor">autor</label>
+        <input type="text" name="autor" id="autor" value="<?php echo $libro_match->autor ?>">
+        <label for="fecha">fecha</label>
+        <input type="text" name="fecha" id="fecha" value="<?php echo $libro_match->fecha ?>">
+        
         <input type="submit" value="Modificar">
     </form>
     
